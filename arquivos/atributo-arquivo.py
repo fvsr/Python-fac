@@ -35,3 +35,7 @@ print(os.path.abspath('exemplo.txt'))
 """
 
 #Exemplo de código
+import os
+
+#Abre um arquivo no modo escrita
+arquivo = open()
