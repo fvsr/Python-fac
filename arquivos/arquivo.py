@@ -23,3 +23,6 @@ print(os.path.relpath(arquivo1.name))
 #A saída será: <_io.TextIOWrapper name='dados1.txt' mode='w' encoding='utf-8'>
 #que sáo os parâmetros de escrita em arquivo1.
 print(arquivo1)
+
+#Fecha o arquivo que foi escrito
+arquivo1.close()

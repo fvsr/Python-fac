@@ -1,0 +1,37 @@
+#Atributos de arquivos
+
+#Atributo "name"
+#print(arquivo.name) #O atributo "name" retorna o nome do arquivo associado ao objeto "arquivo".
+
+#Atributo "mode"
+#print(arquivo.mode) #O atributo "mode" retorna o modo em que o atributo foi aberto,
+#como leitura 'r', escrita 'w', adição 'a', etc.
+#O modo adição abre um arquivo para escrita, mas não sobrescreve o que já foi escrito
+#anteriormente no arquivo, apenas adiciona linhas abaixo da última linha que já existe.
+
+#Atributo "closed"
+"""
+print(arquivo.closed)
+arquivo.close()
+print(arquivo.closed)
+"""
+#O atributo "closed" verifica se o arquivo está fechado,
+#retorna "true" se estiver fechado e "false" caso contrário.
+
+#Caminho do arquivo
+"""
+import os
+
+print(os.path.relpath('exemplo.txt'))
+print(os.path.abspath('exemplo.txt'))
+"""
+#Acessados por meio do módulo "os".
+#O comando "path" é um submódulo de "os".
+#O comando "relpath" retorna o caminho relativo do arquivo, em relação ao diretório atual.
+#O comando "abspath" retorna o caminho absoluto do arquivo no sistema de arquivos.
+
+"""
+"Talk is cheap, show me the code." Linus Torvalds, criador do Linux.
+"""
+
+#Exemplo de código
