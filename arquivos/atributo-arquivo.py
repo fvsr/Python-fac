@@ -37,5 +37,17 @@ print(os.path.abspath('exemplo.txt'))
 #Exemplo de código
 import os
 
-#Abre um arquivo no modo escrita
-arquivo = open()
+#Abre um arquivo no modo escrita.
+arquivo = open('exemplo.txt', 'w')
+
+#Exibe os atributos do arquivo.
+print("Nome do arquivo: ", arquivo.name)
+print("Modo de abertura: ", arquivo.mode)
+print("O arquivo está fechado? ", arquivo.closed)
+
+#Escrevendo no arquivo
+arquivo.write("Olá mundo!")
+
+#Fechando o arquivo
+arquivo.close()
+
