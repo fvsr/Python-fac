@@ -13,7 +13,7 @@ pip install numpy
  
 def main():
     #Abre a imagem original e salva numa variável
-    img = Image.open("simple_icon.png") #Abre o arquivo como imagem.
+    img = Image.open("flor.png") #Abre o arquivo como imagem.
                                         #Função "open" especializada em abrir imagens,
                                         #contida na biblioteca Pillow.
     img.show()
