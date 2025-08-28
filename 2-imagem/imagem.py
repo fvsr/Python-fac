@@ -1,6 +1,7 @@
-#Importa a biblioteca PIL, Python Image Library.
+#Importa a biblioteca PIL, Python Image Library, também chamada de Pillow.
 from PIL import Image
-#Importar a biblioteca numérica numpy.
+#Importar a biblioteca numérica numpy, com aplicações em cálculo e também operações com arrays.
+#Essa biblioteca tem uma função específica para inverter arrays.
 import numpy as np
 
 """
@@ -11,15 +12,19 @@ pip install numpy
 """
  
 def main():
-    # Carregar a imagem original
-    img = Image.open("simple_icon.png") #Abre o arquivo como imagem (não existe arquivo).
+    #Abre a imagem original e salva numa variável
+    img = Image.open("simple_icon.png") #Abre o arquivo como imagem.
+                                        #Função "open" especializada em abrir imagens,
+                                        #contida na biblioteca Pillow.
     img.show()
  
     # Converter a imagem em dados binários
-    img_data = np.array(img) #Transforma o arquivo lido em um array.
-    binary_data = img_data.tobytes()
+    img_data = np.array(img) #Transforma o arquivo lido em um array através de uma função da biblioteca numpy.
+    binary_data = img_data.tobytes() #Transforma o array para um array de binários.
+
+    print("\n, image_data.shape, \n") #Exibe o formato do array
  
-    # Salvar os dados binários em um arquivo
+    # Salvar os dados binários originais em um arquivo.
     with open("original_img.bin", "wb") as file:
         file.write(binary_data)
  
@@ -36,13 +41,17 @@ def main():
         data = bytearray(file.read())
     
     # Inverte todos os bytes
-    data = data[::-1]
+    #data = data[::-1]
  
     with open("copy_img.bin", "wb") as file:
         file.write(data)
  
     # Carregar e mostrar a imagem manipulada
     modified_data = np.frombuffer(data, dtype=np.uint8).reshape(img_data.shape)
+    
+    #inverte todos os bytes
+    modified_data = np.fliplr(modified_data)
+    
     modified_img = Image.fromarray(modified_data)
     modified_img.show()
  
