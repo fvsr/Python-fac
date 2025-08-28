@@ -38,7 +38,7 @@ print(os.path.abspath('exemplo.txt'))
 import os
 
 #Abre um arquivo no modo escrita.
-arquivo = open('exemplo.txt', 'w')
+arquivo = open('exemplo.txt', 'w', encoding='utf-8')
 
 #Exibe os atributos do arquivo.
 print("Nome do arquivo: ", arquivo.name)
@@ -51,3 +51,22 @@ arquivo.write("Olá mundo!")
 #Fechando o arquivo
 arquivo.close()
 
+#Verificando se o arquivo está fechado.
+print("O arquivo está fechado agora?", arquivo.closed)
+
+#Exibindo caminhos relativo e absoluto
+relpath = os.path.relpath('exemplo.txt')
+abspath = os.path.abspath('exemplo.txt')
+
+print("Caminho relativo:", relpath)
+print("Caminho absoluto:", abspath)
+
+#Saída:
+"""
+Nome do arquivo:  exemplo.txt
+Modo de abertura:  w
+O arquivo está fechado?  False
+O arquivo está fechado agora? True
+Caminho relativo: exemplo.txt
+Caminho absoluto: /workspaces/Python-fac/exemplo.txt
+"""
