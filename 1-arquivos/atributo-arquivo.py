@@ -47,7 +47,7 @@ print("Modo de abertura: ", arquivo.mode)
 print("O arquivo está fechado? ", arquivo.closed)
 
 #Escrevendo no arquivo
-arquivo.write("Olá mundo!")
+arquivo.write("Olá mundo! Novo arquivo.")
 
 #Fechando o arquivo
 arquivo.close()

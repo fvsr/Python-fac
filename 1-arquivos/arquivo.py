@@ -15,7 +15,7 @@ arquivo1 = open("dados1.txt",'w', encoding='utf-8')
 print(os.path.abspath(arquivo1.name)) 
 
 #imprime o texto no arquivo externo
-arquivo1.write("Olá mundo!")
+arquivo1.write("Olá mundo! Novo arquivo.")
 
 #A resposta para caminho relativo do arquivo será "dados1.txt",
 #o que significa que o arquivo está no mesmo diretório que o código.
