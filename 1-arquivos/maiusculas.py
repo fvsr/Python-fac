@@ -1,24 +1,28 @@
-#O programa converte o texto escrito para maiúsculas.
+#O programa converte o texto digitado para maiúsculas.
+#Este programa interage com o arquivo de texto "meu_arquivo.txt", que está no mesmo diretório.
 
 #função principal
 def main():
-    #imprime uma mensagem para o usuário
+    #Imprime uma mensagem para o usuário com instruções sobre como usar o programa.
     print("Digite suas frases. Digite 'sair' para terminar e salvar o arquivo.")
-    #cria uma lista que vai receber as frases que o usuário digitar
+    #Cria uma lista vazia que vai armazenar as frases que o usuário digitar.
     frases = []
 
-    #laço contínuo para capturar as entradas do usuário
+    #Laço contínuo para capturar as entradas do usuário.
     while True:
-        #captura o teclado por meio da função input, a seta, ">" sugere o início do texto
-        entrada = input("> ")
-        #para sair do laço digitar "sair"
+        #Captura o teclado por meio da função input, a seta, ">", sugere o início do texto.
+        #A digitação do usuário é armazenada na variável entrada, após cada comando "Enter".
+        entrada = input("> ") #A variável "entrada" é tipo string.
+        #Para sair do laço digitar "sair", case insensitive.
         if entrada.lower() == "sair": #Para sair escrever "sair" isoladamente e dar "Enter".
             break
-        #cada frase capturada é somada ao arquivo
+        #Se não foi "sair", adiciona frase capturada à lista de frases, na lista "frases".
         frases.append(entrada)
 
     #Abre um arquivo no modo de escrita.
-    with open("meu_arquivo.txt","w") as arquivo:
+    #O comando "with" garante que o arquivo será fechado automaticamente.
+    #O comando "encoding='utf-8'" evita problemas com acentos no Windows, mas o Codespace é Linux.
+    with open("meu_arquivo.txt","w",encoding='utf-8') as arquivo:  
         #Para cada frase no modo de entrada, salva no arquivo com uma quebra de linha.
         for frase in frases:
             arquivo.write(frase + "\n")

@@ -1,4 +1,5 @@
 #Manipulação de arquivos
+#Este código interage com o arquivo "dados1.txt", que está no mesmo diretório.
 
 #importação de uma biblioteca do sistema operacional
 import os

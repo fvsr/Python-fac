@@ -35,6 +35,7 @@ print(os.path.abspath('exemplo.txt'))
 """
 
 #Exemplo de código
+#Este código interage com o o arquivo "exemplo.txt", no mesmo diretório.
 import os
 
 #Abre um arquivo no modo escrita.
