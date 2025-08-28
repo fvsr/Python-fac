@@ -16,8 +16,8 @@ def main():
     print("Title:",phrase)
     print("Variável 'phrase':",type(phrase))
 
-    # Dividir a frase em palavras
-    words = phrase.split() 
+    # Dividir a frase em palavras, apesar de não ser necessário.
+    words = phrase.split()
     print("Variável 'words':",type(words))
  
     # Processar cada palavra na lista usando ZENIT POLAR
